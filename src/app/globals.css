@@ -1,34 +1,67 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 :root {
-  --background: #0b1020;
-  --foreground: #e6eaf2;
-  --muted: #9aa4b2;
-  --card: #121a2b;
-  --border: #243047;
-  --accent: #6aa6ff;
+  --background: #0b0c10;
+  --surface: #1f2833;
+  --foreground: #c5c6c7;
+  --muted: #8f9aa6;
+  --border: #2c3b4d;
+  --cyan: #66fcf1;
+  --green: #45a29e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-card: var(--card);
-  --color-border: var(--border);
-  --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-rajdhani);
 }
 
 * { border-color: var(--border); }
 
 body {
-  background: radial-gradient(1200px 800px at 80% -10%, #18233d 0%, var(--background) 60%);
+  min-height: 100vh;
   color: var(--foreground);
+  background:
+    radial-gradient(1200px 700px at 10% -10%, rgba(102, 252, 241, 0.08), transparent 55%),
+    radial-gradient(1000px 700px at 90% -20%, rgba(69, 162, 158, 0.12), transparent 60%),
+    var(--background);
 }
 
 .container-shell { @apply mx-auto w-full max-w-6xl px-4 md:px-6; }
-.card { @apply rounded-2xl border bg-[var(--card)]/70 backdrop-blur; }
-.kicker { @apply text-xs uppercase tracking-[0.16em] text-[var(--muted)]; }
+
+.card {
+  @apply rounded-2xl border backdrop-blur;
+  background: linear-gradient(180deg, rgba(31, 40, 51, 0.95), rgba(31, 40, 51, 0.8));
+  box-shadow: inset 0 0 0 1px rgba(102, 252, 241, 0.06);
+}
+
+.glow-hover {
+  @apply transition;
+}
+.glow-hover:hover {
+  border-color: rgba(102, 252, 241, 0.55);
+  box-shadow: 0 0 0 1px rgba(102, 252, 241, 0.2), 0 0 22px rgba(102, 252, 241, 0.16);
+}
+
+.kicker { @apply text-xs uppercase tracking-[0.16em]; color: var(--green); }
 .h1 { @apply text-4xl md:text-6xl font-semibold leading-tight; }
 .h2 { @apply text-2xl md:text-3xl font-semibold; }
 
+.hero {
+  @apply relative overflow-hidden rounded-2xl border p-8 md:p-12;
+  background-image:
+    linear-gradient(120deg, rgba(11,12,16,0.86), rgba(11,12,16,0.58)),
+    url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=1600&q=60');
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-primary {
+  @apply rounded-xl px-4 py-2 text-sm font-semibold text-black;
+  background: linear-gradient(90deg, var(--cyan), var(--green));
+}
+
+.btn-secondary {
+  @apply rounded-xl border px-4 py-2 text-sm;
+  border-color: rgba(102,252,241,0.35);
+}
