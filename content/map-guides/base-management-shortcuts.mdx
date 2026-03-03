@@ -1,0 +1,88 @@
+---
+title: Base Management Shortcuts (Queue, Factory, Reclaim)
+slug: base-management-shortcuts
+tier: Intermediate
+summary: Klare Basis-Optimierung mit Queue-Tricks, Factory-Priorität, Quota-Mode und sicherem Base-Layout.
+---
+
+## 5-Sekunden-Überblick
+- Queue-Befehle sparen massiv Zeit.
+- Factory-Logik mit Alt und Quota macht Produktion stabil.
+- Gutes Spacing verhindert Chain-Reactions.
+- Smart Reclaim finanziert deinen Tech-Übergang.
+
+## Queue-Control: die wichtigsten Shortcuts
+<div className="attack-grid">
+  <div className="attack-item">
+    <h3>⏩ Befehl nach vorne</h3>
+    <p><kbd>Space</kbd> halten und Befehl geben: springt an den Anfang der Queue.</p>
+  </div>
+  <div className="attack-item">
+    <h3>🧭 Smart einfügen</h3>
+    <p><kbd>Shift</kbd> + <kbd>Space</kbd>: Befehl wird sinnvoll in den Laufweg eingefügt.</p>
+  </div>
+  <div className="attack-item">
+    <h3>⛔ Queue korrigieren</h3>
+    <p><kbd>N</kbd> überspringt aktuellen Schritt, <kbd>Ctrl</kbd> + <kbd>N</kbd> entfernt letzten Queue-Befehl.</p>
+  </div>
+</div>
+
+## Factory-Priorität und Quota-Mode
+### Alt-Priorität in der Factory
+- Mit <kbd>Alt</kbd> eingefügte Unit wird vorne in der Build-Reihenfolge platziert.
+- Mit Repeat an/aus verhält sich der aktuelle Build leicht unterschiedlich (im Video gezeigt).
+
+### Quota-Mode einfach erklärt
+<div className="callout tip">
+  <strong>Info:</strong> Quota hält eine gewünschte Anzahl Units konstant auf dem Feld. Stirbt eine, baut die Factory automatisch nach.
+</div>
+
+Praktisch:
+- Du kannst Quota + normale Queue kombinieren.
+- Reihenfolge laut Video: Alt-Priorität → Quota → normale Queue.
+- Quota ist pro Factory separat.
+
+## Mehrere Constructor effizient verteilen
+- Mehrere Builder auswählen.
+- Mehrere Gebäude mit <kbd>Shift</kbd> vorqueueen.
+- Beim Loslassen <kbd>Space</kbd> halten.
+
+Ergebnis: Builder verteilen sich automatisch auf verschiedene Gebäude statt hintereinander dasselbe zu bauen.
+
+## Area Repair für Dauer-Bauzonen
+Wenn du viele Gebäude in einer Zone setzt:
+- Turrets reparieren sonst kurz und gehen zurück zur alten Aufgabe.
+- Mit Area-Repair kannst du sie in der Zone „gebunden“ halten.
+
+<div className="callout tip">
+  <strong>Tip:</strong> Das ist stark bei Converter-Serien oder wenn viele Constructor Turrets in einem Cluster arbeiten sollen.
+</div>
+
+## Spacing und Explosions-Sicherheit
+### Building Spacing setzen
+- Mit <kbd>Alt</kbd> + <kbd>Z</kbd> / <kbd>Alt</kbd> + <kbd>X</kbd> Abstand anpassen.
+- Gutes Spacing reduziert Splash/Chain-Reaction Risiko.
+
+### Blast Radius prüfen
+- Beim Platzieren mit <kbd>Space</kbd> + <kbd>X</kbd> den Explosionsradius anzeigen.
+
+<div className="callout warn">
+  <strong>Warnung:</strong> Stelle Converter nicht direkt neben Fusions. Eine Explosion kann eine Kettenreaktion auslösen und große Teile deiner Eco löschen.
+</div>
+
+## Reclaim richtig nutzen
+- Reclaim gibt dir laut Video den vollen Metallwert zurück.
+- Nutze Area-Reclaim mit <kbd>Alt</kbd>-Drag, um nur ähnliche Objekte zu holen.
+
+Beispiel:
+- Drag auf Wind-Turbine starten ⇒ nur Wind-Turbinen reclaimen.
+- Drag auf Baum starten ⇒ nur Bäume reclaimen.
+
+So vermeidest du versehentliches Reclaim von wichtigen Gebäuden.
+
+## Quick Checklist (vor Midgame-Tech)
+- [ ] Queue-Shortcuts aktiv genutzt
+- [ ] Factory mit Quota sauber eingestellt
+- [ ] Builder intelligent verteilt statt gestaut
+- [ ] Converter/Fusion mit Abstand gesetzt
+- [ ] Reclaim-Felder gezielt abgeerntet
