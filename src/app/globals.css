@@ -65,3 +65,61 @@ body {
   @apply rounded-xl border px-4 py-2 text-sm;
   border-color: rgba(102,252,241,0.35);
 }
+
+.guide-content h2 {
+  @apply mt-10 border-b pb-2 text-2xl;
+  border-color: rgba(102, 252, 241, 0.2);
+}
+
+.guide-content h3 {
+  @apply mt-6 text-xl;
+  color: var(--cyan);
+}
+
+.guide-content p,
+.guide-content ul,
+.guide-content ol {
+  @apply my-4;
+}
+
+.guide-content kbd {
+  @apply rounded-md border px-2 py-1 text-xs font-semibold;
+  border-color: rgba(102, 252, 241, 0.45);
+  background: rgba(11, 12, 16, 0.8);
+  color: var(--cyan);
+}
+
+.callout {
+  @apply my-5 rounded-lg border-l-4 p-4;
+  background: rgba(31, 40, 51, 0.65);
+}
+
+.callout.tip {
+  border-left-color: var(--cyan);
+}
+
+.callout.warn {
+  border-left-color: #ff5e6c;
+}
+
+.attack-grid {
+  @apply my-5 grid gap-3 md:grid-cols-3;
+}
+
+.attack-item {
+  @apply rounded-lg border p-3;
+  background: rgba(11, 12, 16, 0.45);
+}
+
+.guide-content figure {
+  @apply mx-auto my-8 max-w-3xl;
+}
+
+.guide-content figure img {
+  @apply mx-auto rounded-xl border;
+}
+
+.guide-content figcaption {
+  @apply mt-2 text-center text-sm;
+  color: var(--muted);
+}
