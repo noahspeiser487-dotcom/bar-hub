@@ -2,6 +2,11 @@
 import { getMapGuides } from "@/lib/content";
 import { Mdx } from "@/components/mdx";
 
+export async function generateStaticParams() {
+  const items = await getMapGuides();
+  return items.map((item) => ({ slug: item.slug }));
+}
+
 export default async function MapGuideDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const item = (await getMapGuides()).find((entry) => entry.slug === slug);

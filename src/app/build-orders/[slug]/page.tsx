@@ -2,6 +2,11 @@
 import { getBuildOrders } from "@/lib/content";
 import { Mdx } from "@/components/mdx";
 
+export async function generateStaticParams() {
+  const items = await getBuildOrders();
+  return items.map((item) => ({ slug: item.slug }));
+}
+
 export default async function BuildOrderDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const item = (await getBuildOrders()).find((entry) => entry.slug === slug);
