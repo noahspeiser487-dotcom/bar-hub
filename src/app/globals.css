@@ -1,0 +1,34 @@
+﻿@import "tailwindcss";
+
+:root {
+  --background: #0b1020;
+  --foreground: #e6eaf2;
+  --muted: #9aa4b2;
+  --card: #121a2b;
+  --border: #243047;
+  --accent: #6aa6ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+}
+
+* { border-color: var(--border); }
+
+body {
+  background: radial-gradient(1200px 800px at 80% -10%, #18233d 0%, var(--background) 60%);
+  color: var(--foreground);
+}
+
+.container-shell { @apply mx-auto w-full max-w-6xl px-4 md:px-6; }
+.card { @apply rounded-2xl border bg-[var(--card)]/70 backdrop-blur; }
+.kicker { @apply text-xs uppercase tracking-[0.16em] text-[var(--muted)]; }
+.h1 { @apply text-4xl md:text-6xl font-semibold leading-tight; }
+.h2 { @apply text-2xl md:text-3xl font-semibold; }
+
